@@ -1,6 +1,6 @@
-train: F:\ThreeV_cell_seg_SusmitaGhosh\data\images\train
-val: F:\ThreeV_cell_seg_SusmitaGhosh\data\images\val
-test: F:\ThreeV_cell_seg_SusmitaGhosh\data\images\test
-
+names:
+- cell
 nc: 1
-names: ["cell"]
+test: C:\Users\susmi\ThreeV_cell_seg_SusmitaGhosh\try_v2\livecell\output\test\images
+train: C:\Users\susmi\ThreeV_cell_seg_SusmitaGhosh\try_v2\livecell\output\train\images
+val: C:\Users\susmi\ThreeV_cell_seg_SusmitaGhosh\try_v2\livecell\output\valid\images
