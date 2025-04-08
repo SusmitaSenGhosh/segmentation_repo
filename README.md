@@ -1,9 +1,3 @@
-# segmentation_repo
-#docker run -v D:/work/git_forest/segmentation_repo/app/test_data/output:/app/test_data/output -p 8000:8000 segment-app1
-#./app/test_data/input1.tif
-
-
-
 ## YOLO-based Cell Segmentation on LiveCell Dataset
 
 This repository implements a YOLO-based cell segmentation model to identify and segment cells in images from the LiveCell dataset. The project utilizes YOLO (You Only Look Once) to classify and segment cell instances from microscopy images.
@@ -17,4 +11,23 @@ The dataset contains total images divided into training, validation and testing 
 # Train
 For training, use train.py which uses yolov8n-seg model pretrained with COCO dataset.
 
-#
+# Test
+For testing, we can use the API http://localhost:8000/detect ( as configured for now ) to send an input image location and receive the output image location with segmentation mask as a resposne.
+
+#Here is a sample code to do the same
+
+import requests
+
+# Define the URL of the API endpoint
+url = "http://localhost:8000/test"
+
+# Create a dictionary with the data you want to send in the POST request
+data = {"input" : "./app/test_data/input1.tif"}
+
+response = requests.post(url, json=data)
+
+# Print the status code and response text
+if response.status_code == 200:
+    print("Success:", response.json())  # If the API responds with JSON data
+else:
+    print("Error:", response.status_code)
