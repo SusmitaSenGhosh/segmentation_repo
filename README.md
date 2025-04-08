@@ -6,7 +6,7 @@ This repository implements a YOLO-based cell segmentation model to identify and 
 This project uses the LiveCell dataset. You can download the dataset from here (https://github.com/sartorius-research/LIVECell). The dataset consists of microscopy images containing cell structures and is designed for cell segmentation tasks.
 
 
-The dataset contains total images divided into training, validation and testing purpose. Along with this corresponding .json files are also provided for the annotations in COCO object detection format. To get the seprate annotations for each images in YOLO format, use coco_to_yolo.py. The 
+The dataset contains 5239 total images divided into training, validation and testing purpose. Along with this corresponding .json files are also provided for the annotations in COCO object detection format. To get the seprate annotations for each images in YOLO format, use coco_to_yolo.py. The 
 
 # Train
 For training, use train.py which uses yolov8n-seg model pretrained with COCO dataset.
@@ -17,16 +17,9 @@ For testing, we can use the API http://localhost:8000/detect ( as configured for
 #Here is a sample code to do the same
 
 import requests
-
-# Define the URL of the API endpoint
 url = "http://localhost:8000/test"
-
-# Create a dictionary with the data you want to send in the POST request
 data = {"input" : "./app/test_data/input1.tif"}
-
 response = requests.post(url, json=data)
-
-# Print the status code and response text
 if response.status_code == 200:
     print("Success:", response.json())  # If the API responds with JSON data
 else:
