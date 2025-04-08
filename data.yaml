@@ -1,0 +1,6 @@
+train: F:\ThreeV_cell_seg_SusmitaGhosh\data\images\train
+val: F:\ThreeV_cell_seg_SusmitaGhosh\data\images\val
+test: F:\ThreeV_cell_seg_SusmitaGhosh\data\images\test
+
+nc: 1
+names: ["cell"]
