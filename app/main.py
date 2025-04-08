@@ -8,7 +8,7 @@ import os, time
 
 app = FastAPI()
 trained_model_path = r"./model/best.pt"
-output_image_path = r"./data/output/"
+output_image_path = r"./app/test_data/output/"
 
 @app.post("/detect/")
 async def detect_image(input_image_path):
