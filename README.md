@@ -6,7 +6,7 @@ This repository implements a YOLO-based cell segmentation model to identify and 
 This project uses the LiveCell dataset. You can download the dataset from here (https://github.com/sartorius-research/LIVECell). The dataset consists of microscopy images containing cell structures and is designed for cell segmentation tasks.
 
 
-The dataset contains 5239 total images divided into training, validation and testing purpose. Along with this corresponding .json files are also provided for the annotations in COCO object detection format. To get the seprate annotations for each images in YOLO format, use coco_to_yolo.py. The 
+The dataset contains 5239 total images divided into training, validation and testing purpose. Along with this corresponding .json files are also provided for the annotations in COCO object detection format. To get the seprate annotations for each images in YOLO format, use coco_to_yolo.py. 
 
 # Train
 For training, use train.py which uses yolov8n-seg model pretrained with COCO dataset.
