@@ -18,7 +18,7 @@ For testing, we can use the API http://localhost:8000/detect ( as configured for
 
 ```
 import requests
-url = "http://localhost:8000/test"
+url = "http://localhost:8000/detect"
 data = {"input" : "./app/test_data/input1.tif"}
 response = requests.post(url, json=data)
 if response.status_code == 200:
