@@ -16,6 +16,7 @@ For testing, we can use the API http://localhost:8000/detect ( as configured for
 
 #Here is a sample code to do the same
 
+```
 import requests
 url = "http://localhost:8000/test"
 data = {"input" : "./app/test_data/input1.tif"}
@@ -24,3 +25,4 @@ if response.status_code == 200:
     print("Success:", response.json())  # If the API responds with JSON data
 else:
     print("Error:", response.status_code)
+```
